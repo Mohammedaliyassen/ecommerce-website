@@ -485,4 +485,7 @@ header ul li{
  #menu{
      display: initial;
  }
+ .imgBox{
+    display: none;
+}
 }
