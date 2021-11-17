@@ -428,6 +428,10 @@ header ul li{
     top: 150px;
     left: 20px;
    }
+    .pervice svg{
+    margin-left: 0px;
+    margin-top: 0px;
+   }
    .show .next {
     position: absolute;
     background-color: white;
