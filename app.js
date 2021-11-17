@@ -80,9 +80,26 @@ const closeMenu = ()=>{
     document.getElementById('slideMenu').style.cssText = 'transform: scaleX(0);'
 }
 
+const random = ['images/image-product-1.jpg','images/image-product-2.jpg',
+'images/image-product-3.jpg','images/image-product-4.jpg'] 
+const previousImg = '';
+const currentImg = '';
+
 const next = ()=>{
-    
+    min = 0;
+    max = 3;
+    const theimg = Math.floor(Math.random()*(max - min + 1 )+min);
+    document.getElementById('theBig').src = random[theimg];
+    document.getElementById('fullImg').src = random[theimg];
+    console.log(max);
 }
 const pervice = ()=>{
-
+    min = 0;
+    max = 3;
+    const theimg = Math.floor(Math.random()*(max - min + 1 )+min);
+    document.getElementById('theBig').src = random[theimg];
+    document.getElementById('fullImg').src = random[theimg];
 }
+
+
+
