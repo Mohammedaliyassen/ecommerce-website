@@ -1,4 +1,9 @@
-const buy = document.getElementById('numAmount');     
+const buy = document.getElementById('numAmount');    
+const random = ['images/image-product-1.jpg','images/image-product-2.jpg',
+'images/image-product-3.jpg','images/image-product-4.jpg'] 
+let previousImg = '';
+let currentImg = 0;
+
 
 document.getElementById('plus').addEventListener('click', ()=>{
     document.getElementById('minus').style.cssText= 'visibility: visible;';
@@ -80,11 +85,6 @@ const closeMenu = ()=>{
     document.getElementById('slideMenu').style.cssText = 'transform: scaleX(0);'
 }
 
-const random = ['images/image-product-1.jpg','images/image-product-2.jpg',
-'images/image-product-3.jpg','images/image-product-4.jpg'] 
-let previousImg = '';
-let currentImg = 0;
-
 const next = ()=>{
     if(currentImg < 3){
         currentImg = 1 + currentImg;
@@ -94,6 +94,7 @@ const next = ()=>{
     // const theimg = Math.floor(Math.random()*(max - min + 1 )+min); //معادلة العشوائية
     document.getElementById('theBig').src = random[currentImg];
     document.getElementById('fullImg').src = random[currentImg];
+    console.log(currentImg);
 }
 const pervice = ()=>{
     if (currentImg > 0){
@@ -103,8 +104,5 @@ const pervice = ()=>{
     }
     document.getElementById('theBig').src = random[currentImg];
     document.getElementById('fullImg').src = random[currentImg];
+    console.log(currentImg);
 }
-
-
-
-
