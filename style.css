@@ -276,6 +276,7 @@ header ul li{
     border-radius: 50%;
     top: 35%;
     right: 30%;
+    cursor: pointer;
    }
 .next svg{
     margin-left: 15px;
@@ -292,6 +293,7 @@ header ul li{
     border-radius: 50%;
     top: 35.8%;
     left: 38.5%;
+    cursor: pointer;
    }
    .pervice svg{
     margin-left: 12px;
