@@ -299,7 +299,7 @@ header ul li{
    }
 /* ---------- Mobile --------------*/
 
-@media(max-width:375px){
+@media(max-width:511px){
     body{
         width: 375px;
         
