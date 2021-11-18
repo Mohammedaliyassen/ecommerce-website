@@ -83,23 +83,28 @@ const closeMenu = ()=>{
 const random = ['images/image-product-1.jpg','images/image-product-2.jpg',
 'images/image-product-3.jpg','images/image-product-4.jpg'] 
 const previousImg = '';
-const currentImg = '';
+const currentImg = 0;
 
 const next = ()=>{
-    min = 0;
-    max = 3;
-    const theimg = Math.floor(Math.random()*(max - min + 1 )+min);
-    document.getElementById('theBig').src = random[theimg];
-    document.getElementById('fullImg').src = random[theimg];
-    console.log(max);
+    if(currentImg < 3){
+        currentImg = 1 + currentImg;
+    }else{
+        currentImg = 0;
+    }
+    // const theimg = Math.floor(Math.random()*(max - min + 1 )+min); //معادلة العشوائية
+    document.getElementById('theBig').src = random[currentImg];
+    document.getElementById('fullImg').src = random[currentImg];
 }
 const pervice = ()=>{
-    min = 0;
-    max = 3;
-    const theimg = Math.floor(Math.random()*(max - min + 1 )+min);
-    document.getElementById('theBig').src = random[theimg];
-    document.getElementById('fullImg').src = random[theimg];
+    if (currentImg > 0){
+        currentImg=currentImg-1;
+    }else{
+        currentImg = 3;
+    }
+    document.getElementById('theBig').src = random[currentImg];
+    document.getElementById('fullImg').src = random[currentImg];
 }
+
 
 
 
