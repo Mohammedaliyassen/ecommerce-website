@@ -102,7 +102,9 @@ document.getElementById('buyIt').addEventListener('click' , ()=>{
 })
 
 const deleteThis= ()=>{
-    document.getElementById('prodectIbuy').remove();   
+    document.getElementById('prodectIbuy').remove();  
+    document.getElementById('empty').style.cssText="visibility: visible;";
+    document.getElementById('checkOut').style.cssText="visibility: hidden;";
     document.getElementById('counter').innerHTML= 0;
 }
 const openMenu = ()=>{
