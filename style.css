@@ -120,6 +120,16 @@ header ul li{
     position: absolute;
     font-weight: bold;
 }
+#counter{
+    position: relative;
+    left: 35px;
+    bottom: 15px;
+    font-size: 13px;
+    background-color: #ef842ad4;
+    padding: 1px;
+    border-radius: 12px;
+    color: white;
+}
 /* ------- End Header -------- */
 /* --------------------------- */
 /* ------- section ----------- */
