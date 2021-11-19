@@ -4,12 +4,13 @@ const random = ['images/image-product-1.jpg','images/image-product-2.jpg',
 let previousImg = '';
 let currentImg = 0;
 
-
+// to add one more
 document.getElementById('plus').addEventListener('click', ()=>{
     document.getElementById('minus').style.cssText= 'visibility: visible;';
     document.getElementById('buyIt').style.cssText= 'visibility: visible;';
     buy.value = Number (buy.value) + 1;
 })
+// to remove one 
 document.getElementById('minus').addEventListener('click', ()=>{
     buy.value = Number (document.getElementById('numAmount').value) - 1;
     if( buy.value <= 0){
@@ -39,8 +40,6 @@ const closeFullImg = ()=>{
     document.getElementById('imgBox').style.visibility='hidden';
 }
 
-document.getElementById('buyIt').addEventListener('click' , ()=>{
-
     const divProdect = document.createElement("div");
     const img = document.createElement("img");
     const deleteImg = document.createElement("img");
@@ -62,6 +61,32 @@ document.getElementById('buyIt').addEventListener('click' , ()=>{
     deleteImg.setAttribute('id','delete');
     deleteImg.width='10';
     img.width='45';
+
+document.getElementById('buyIt').addEventListener('click' , ()=>{
+
+//     const divProdect = document.createElement("div");
+//     const img = document.createElement("img");
+//     const deleteImg = document.createElement("img");
+//     const title = document.createElement("p");
+//     const amountIBuy = document.createElement("span");
+//     const allPrice = document.createElement("span");
+
+//     divProdect.appendChild(img) ;
+//     divProdect.appendChild(title);
+//     title.appendChild(amountIBuy);
+//     title.appendChild(allPrice);
+//     divProdect.appendChild(deleteImg) ;
+    
+//     deleteImg.classList.add('delete');
+//     divProdect.setAttribute('id','prodectIbuy');
+//     deleteImg.setAttribute('onclick','deleteThis()');
+//     img.src='images/image-product-1-thumbnail.jpg';
+//     deleteImg.src='images/icon-delete.svg';
+//     deleteImg.setAttribute('id','delete');
+//     deleteImg.width='10';
+//     img.width='45';      //when i want create a new div for onclick but ther problem that when i click remove it not remove the same div
+    
+    
     title.innerHTML= 'Fall Limited Edition Sneakers <br> $125.00 x '+ buy.value + 
     '<span style="color: black;"> $' + buy.value * 125+'.00 </span>'
 
@@ -73,10 +98,12 @@ document.getElementById('buyIt').addEventListener('click' , ()=>{
     document.getElementById('iBuy').appendChild(divProdect);
     document.getElementById('checkOut').style.cssText="visibility: visible;";
     document.getElementById('empty').style.cssText="visibility: hidden;";
+    document.getElementById('counter').innerHTML= buy.value;
 })
 
 const deleteThis= ()=>{
     document.getElementById('prodectIbuy').remove();   
+    document.getElementById('counter').innerHTML= 0;
 }
 const openMenu = ()=>{
     document.getElementById('slideMenu').style.cssText = 'transform: scaleX(1);'
